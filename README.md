@@ -11,7 +11,7 @@
 - 📊 Онлайн-показ «Суммарный объём дубликатов» (суммируются только копии, без повторного учёта)
 - 🪟 Два окна путей: **Оригиналы** (таблица с нумерацией групп) и **Копии** (список). Выбор оригинала подсвечивает соответствующие копии
 - 📋 Экспорт отчёта в CSV
-- 🟦 Прогресс-бар (тёмно-синий), 0–100%
+- 🟦 Прогресс-бар  0–100%
 
 ## Логика выбора «Оставить»
 Если найдено ≥2 файла с **совпадающим именем** и **SHA-256** — оставляется тот, чья родительская папка создана **раньше** (по `ctime` на Windows). Остальные — «Копии».
@@ -23,7 +23,7 @@ python -m venv .venv
 .venv\Scripts\activate
 pip install -r requirements.txt
 python duplicate_finder_gui.py
-
+```
 Для похожих изображений/видео нужны:
 pip install pillow imagehash и для видео: pip install opencv-python
 
@@ -36,11 +36,7 @@ pip install pillow imagehash и для видео: pip install opencv-python
 
 GUI to find duplicate/triplicate files (name + SHA-256), quarantine/undo, perceptual hashes
 
----
 
-## Файл: `README_EN.md`
-
-```markdown
 # Duplicate & Triplicate Finder (Tkinter)
 
 A desktop GUI for Windows (also runs on macOS/Linux) to find **duplicate** and **triplicate** files by comparing **file name + SHA-256**. Optional **perceptual hashing** for similar images/videos.
@@ -67,7 +63,7 @@ pip install -r requirements.txt
 python duplicate_finder_gui.py
 For similarity:
 pip install pillow imagehash and (for video) pip install opencv-python.
-
+````
 Quarantine & Undo
 
 Each cleanup creates a timestamped batch folder with operations.csv and actions.log
